@@ -1,0 +1,245 @@
+@mixin button {
+   width: 100%;
+   margin: 20px 0px 5px 0px;
+   border-radius: 4px;
+   box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   // font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   outline: none;
+   outline: 0;
+   // padding: 10px 25px;
+   text-align: center;
+   transform: translateY(0);
+   transition: transform 150ms, box-shadow 150ms;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+}
+
+.checkout_page {
+   max-width: 1650px;
+   margin-left: auto;
+   margin-right: auto;
+
+   .no_content {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .link {
+         height: 40px;
+         width: 200px;
+         background-color: #017FA6;
+         color: aliceblue;
+         border-radius: 10px;
+         margin-top: 24px;
+
+         a {
+            margin-top: 10px;
+         }
+
+      }
+
+      .link:hover {
+         transform: translateY(-3px);
+         transition: transform 350ms;
+      }
+
+      .link:active {
+         transform: translateY(3px);
+         transition: transform 350ms;
+      }
+   }
+
+   .content {
+      @media screen and (min-width: 1024px) {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .product {
+         @media screen and (min-width: 1024px) {
+            width: calc(100% - 300px);
+         }
+         border-radius: 12px;
+         border: solid 1px #0180a63b;
+         max-width: 1024px;
+         padding: 12px;
+         margin-right: 24px;
+         width: 100%;
+
+         .item_divider {
+            border-bottom: 1px solid #86868638;
+            margin-right: 24px;
+
+            
+         }
+
+         .product_info {
+            display: flex;
+            margin: 12px 0px 12px 0px;
+            padding-right: 12px;
+
+            .product_image {
+               @media screen and (max-width: 650px) {
+                  width: 120px;
+                  height: 100px;
+               }
+            }
+
+            .name {
+               margin-left: 5px;
+               width: max-content;
+               flex-grow: 1;
+               max-width: 500px;
+            }
+
+            .quantity {
+               width: 80px;
+            }
+
+            .price {
+               width: 80px;
+            }
+
+            .total {
+               width: 80px;
+            }
+         }
+
+         .product_info_header {
+            display: flex;
+            margin: 12px 0px 12px 0px;
+            border-bottom: solid 1px #b1afaf3f;
+            line-height: 32px;
+
+
+            .image {
+               width: 200px;
+
+               @media screen and (max-width: 650px) {
+                  width: 120px;
+               }
+            }
+
+            .name {
+               margin-left: 5px;
+               width: max-content;
+               flex-grow: 1;
+               max-width: 500px;
+            }
+
+            .quantity {
+               width: 80px;
+            }
+
+            .price {
+               width: 80px;
+            }
+
+            .total {
+               width: 80px;
+            }
+         }
+      }
+
+      .customer {
+         width: 300px;
+         padding: 5px;
+         border: 1px solid #92c7f37a;
+         border-radius: 10px;
+
+         @media screen and (max-width:1023px) {
+            margin-top: 24px;
+            padding: 12px;
+            width: 100%;
+         }
+
+         // background-color: antiquewhite;
+
+         .input {
+            margin-bottom: 24px;
+         }
+
+         .customer_title {
+            font-size: 14;
+         }
+
+         .divider {
+            margin: 5px 0px 10px 0px;
+         }
+
+         .customer_order {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+         }
+
+         .customer_remind {
+            font-size: 14px;
+            margin: 12px 0px 12px 0px;
+         }
+
+         .text_warning {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(248, 8, 8);
+            line-height: 14px;
+            margin: 12px 0px 12px 0;
+         }
+
+         .text_link{
+            color: #14b5f5;
+         }
+
+         .button_submit {
+            background-color: #13aa52;
+            border: 1px solid #13aa52;
+            height: 42px;
+            @include button();
+         }
+
+         .button_submit_loading:disabled {
+            background-color: #13aa52;
+            border: 1px solid #13aa52;
+            height: 42px;
+            @include button();
+            opacity: .5;
+
+            .text_button_submit::before {
+               content: '';
+               background-image: url('../image/async_loading.svg');
+               width: 20px ;
+               height: 20px ;
+               display: block;
+               position: absolute;
+               left: 90px;
+               top: 10px
+            }
+            
+         }
+
+         .button_submit:hover {
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(-2px);
+         }
+
+         .button_submit:active {
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(2px);
+         }
+      }
+
+   }
+}

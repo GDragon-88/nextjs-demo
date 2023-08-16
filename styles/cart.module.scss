@@ -1,0 +1,257 @@
+@mixin button {
+   width: 100%;
+   margin: 20px 0px 5px 0px;
+   border-radius: 4px;
+   box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   outline: none;
+   outline: 0;
+   padding: 10px 25px;
+   text-align: center;
+   transform: translateY(0);
+   transition: transform 150ms, box-shadow 150ms;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+}
+
+@mixin fontSize {
+   @media screen and (max-width: 768px) {
+      font-size: 18px;
+   }
+}
+
+
+.cart {
+   margin-top: 20px;
+
+   .cartForm {
+      @media screen and (min-width: 1024px) {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      .firstCol {
+         width: 100%;
+
+         .title {
+            font-size: 24px;
+            color: rgba(138, 138, 138, 0.904);
+
+            @include fontSize;
+         }
+      }
+
+      .secondCol {
+         display: flex;
+         justify-content: flex-end;
+         margin: 0px 10px;
+
+         @media screen and (max-width:1024px) {
+            margin-top: 30px;
+         }
+
+         .content {
+            width: 400px;
+            min-width: 300px;
+
+            @media screen and (max-width: 1024px) {
+               max-width: 400px;
+
+            }
+         }
+
+         .order_summary {
+            font-size: 24px;
+            color: rgba(138, 138, 138, 0.904);
+
+            @media screen and (max-width: 768px) {
+               font-size: 18px;
+            }
+         }
+
+         .subTotal {
+            display: flex;
+            margin: 15px 0px;
+
+            .subTotal_col1 {
+               color: rgba(138, 138, 138, 0.904);
+               width: 100%;
+
+            }
+
+            .subTotal_col2 {
+               text-align: right;
+            }
+
+         }
+
+         .discount {
+            .discount_text {
+               margin: 10px 0px;
+               color:rgba(138, 138, 138, 0.904)
+            }
+
+            .note {
+               font-size: 12px;
+               color:rgba(138, 138, 138, 0.904)
+            }
+
+         }
+
+         .total {
+            margin-top: 15px;
+            font-size: 24px;
+            display: flex;
+
+            .total_col1 {
+               width: 100%;
+               @include fontSize;
+            }
+
+            .subTotal_col2 {
+               text-align: left;
+               @include fontSize;
+            }
+         }
+
+         .checkOut {
+            background-color: #13aa52;
+            border: 1px solid #13aa52;
+
+            @include button;
+         }
+
+         .checkOut:hover {
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(-2px);
+         }
+
+         .checkOut:active{
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(2px);
+         }
+
+         .backShop{
+            background-color: #f58031;
+            border: 1px solid #f58031;
+
+            @include button;
+         }
+
+         .backShop:hover{
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(-2px);
+         }
+
+         .backShop:active{
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(2px);
+         }
+
+      }
+   }
+
+   .totalMoney {
+      text-align: right;
+   }
+}
+
+.cartItem {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 100px;
+   margin: 10px 0px 10px 0px;
+
+   .itemImage {
+      width: 150px;
+      height: 100%;
+      background-color: azure;
+      object-fit: contain;
+   }
+
+
+   .itemInfo {
+      width: 100%;
+      margin-left: 15px;
+
+      .itemName {
+         @media screen and (max-width: 768px) {
+            height: 50px;
+         }
+      }
+
+      .itemPrice {
+         margin: 5px 0px;
+      }
+
+      @media screen and (min-width: 1241px) {
+         display: grid;
+         grid-template-columns: 50% 25% 25%;
+      }
+
+      @media screen and (min-width:1025px) and (max-width: 1240px) {
+         display: inline;
+      }
+
+      @media screen and (min-width: 881px) and (max-width: 1023px) {
+         display: grid;
+         grid-template-columns: 50% 25% 25%;
+      }
+
+   }
+
+
+   .itemQuantity {
+      text-align: center;
+      width: 165px;
+
+      @media screen and (max-width: 768px) {
+         text-align: left;
+      }
+
+      .button {
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         background-color: #b9b6b6d3;
+         margin: 0px 10px;
+         font-weight: 700;
+         font-size: 20px;
+         color: white;
+
+         @media screen and (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+         }
+
+         span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -2px;
+         }
+
+         .minus {
+            margin-top: -2px;
+         }
+      }
+
+      .delete {
+         font-size: 24px;
+         margin-left: 10px;
+         cursor: pointer;
+      }
+   }
+}
+
+.divider {
+   margin: 10px 0px;
+}

@@ -1,0 +1,24 @@
+.signUpConfirm {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .signUpLayout{
+      width: 700px;
+      padding: 20px;
+      border: solid 1px rgb(235, 234, 234);
+      border-radius: 10px;
+
+
+      .title {
+         font-size: 18px;
+         margin-bottom: 10px;
+      }
+
+      .subTitle {
+         font-size: 14px;
+         color: rgb(119, 118, 118);
+         margin-bottom: 20px;
+      }
+   }
+}

@@ -1,0 +1,90 @@
+@mixin plugIn{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 30px;
+   width: 30px;
+   border-radius: 50%;
+   color: white;
+   font-weight: 700;
+   cursor: pointer;
+}
+
+.signup {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgb(246, 247, 248);
+   min-height: 80vh;
+   position: relative;
+
+   .signupform {
+      border-radius: 5px;
+      padding: 30px;
+      margin: 50px 0px 50px 0px;
+      width: 500px;
+      background-color: white;
+      
+      .header{
+         display: flex;
+         align-items: center;
+         margin: 0 0 30px 0px;
+
+         .firstCol{
+            font-size: 32px;
+            width: 50%;
+         }
+         .secondCol {
+            border-left: solid 1px rgba(36, 36, 36, 0.959);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .platform {
+               display: flex;
+               align-items: center;
+               justify-content: flex-start;
+
+               p {
+                  margin-right: 5px;
+                  margin-bottom: 0px;
+
+               }
+
+               .plugInGoogle{
+                  @include plugIn;
+                  background-color: rgb(238, 77, 66);
+                  
+               }
+
+               .plugInFacebook{
+                  @include plugIn;
+                  background-color: rgb(66, 112, 238);
+                  
+               }
+
+            }
+         }
+      }
+      
+      .ant-form-item {
+         margin-bottom: 10px;
+
+         .ant-form-item-row {
+            display: flex;
+            flex-direction: column;
+         }
+      }
+   }
+
+   .link{
+      color: aquamarine;
+      cursor: pointer;
+      margin-left: 5px;
+   }
+   .link:hover{
+      text-decoration: underline;
+   }
+
+}

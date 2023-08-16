@@ -1,0 +1,89 @@
+.header{
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+}
+.topbar{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding-right: 30px;
+   height: 65px;
+   border-bottom: solid 1px #dddcdc9c;
+   background-color: white;
+   @media screen and (max-width:800px ){
+      height: 50px;
+   }
+
+   .user{
+      margin-right: 35px;
+   }
+}
+
+.nav_bar {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 80px;
+   box-shadow: 0px 5px 3px 2px rgba(34, 34, 34, 0.07);
+   -webkit-box-shadow: 0px 5px 3px 2px rgba(17, 17, 17, 0.07);
+   -moz-box-shadow: 0px 5px 3px 2px rgba(31, 31, 31, 0.07);
+   background-color: white;
+}
+
+.logo {
+   font-size: 30px;
+   @media screen and (max-width: 650px){
+      font-size: 20px;
+   }
+   font-weight: 500;
+   width: 20%;
+   margin-left: 20px;
+}
+
+.link_site {
+   display: flex;
+   // width: 80%;
+   justify-content: flex-end;
+}
+
+.search {
+   width: 30%;
+   .search_input{
+      width: 100%;
+   }
+}
+
+.link {
+   margin-right: 30px;
+}
+
+.menu_button {
+   margin-right: 20px;
+   font-size: 24px;
+}
+
+.menu_content{
+   text-decoration: none;
+   font-size: 18px;
+}
+
+.user{
+   cursor: pointer;
+}
+
+
+.userPopup {
+   cursor: pointer;
+   font-size: 16px;
+   width: 100px;
+
+   p{
+      line-height: 25px;
+   }
+   p:hover{
+      background-color: rgb(221, 218, 218);
+
+   }
+}

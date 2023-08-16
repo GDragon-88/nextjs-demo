@@ -1,0 +1,91 @@
+.product_page {
+
+   .content {
+      @media screen and (min-width: 1024px) {
+         display: flex;
+      }
+
+
+      .col1 {
+         width: 320px;
+         margin-right: 20px;
+         border: solid 1px #d4d4d491;
+         padding: 15px;
+
+         @media screen and (max-width: 1024px) {
+            display: none;
+         }
+
+         .sort_field {
+            margin-bottom: 20px;
+         }
+
+         .button_sort {
+            margin-top: 20px;
+            background-color: #017FA6;
+            width: 100%;
+         }
+      }
+
+      .col2 {
+         .productList {
+            // background-color: #017FA6;
+            width: calc(100vw - 400px);
+            padding: 20px;
+            // display: flex;
+            // flex-wrap: wrap;
+            justify-content: space-evenly;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            row-gap: 24px;
+            column-gap: 24px;
+
+            @media screen and (max-width: 1024px) {
+               width: 100%;
+            }
+         }
+
+         .paginate {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+         }
+      }
+   }
+
+   .sort_form {
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 1025px) {
+         display: none;
+      }
+
+      .sort_header {
+         font-size: 18px;
+         font-weight: 600;
+         margin-bottom: 0;
+      }
+
+      .form {
+         @media screen and (min-width: 800px) {
+            display: flex;
+            justify-content: space-between;
+         }
+
+      }
+
+      .sort_apply {
+         display: flex;
+         align-items: flex-end;
+
+         .button_apply_sort {
+            margin-top: 15px;
+            background-color: #017FA6;
+         }
+      }
+
+   }
+
+
+}

@@ -1,0 +1,47 @@
+.orderHistory {
+   min-height: 500px;
+   .listOrder {
+      overflow-x: scroll;
+   }
+   .order_detail {
+      margin: 12px 0px 12px 0px;
+      width: fit-content;
+      .sub_detail{
+         // max-width: 700px;
+         .header_panel {
+            display: flex;
+            margin-bottom: 12px;
+
+            .order_time{
+               width: 120px;
+               text-align: right;
+            }
+            
+         }
+
+         .detail_panel {
+            display: flex;
+
+         }
+      }
+      .list_product {
+         display: flex;
+         align-items: center;
+
+         .product_name{
+            min-width: 180px;
+         }
+         .product_price{
+            width: 120px;
+         }
+
+         .quantity {
+            width: 80px;
+         }
+         .subTotal {
+            width: 80px
+         }
+      }
+   }
+
+}

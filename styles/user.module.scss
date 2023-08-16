@@ -1,0 +1,118 @@
+@mixin button {
+   width: 100px;
+   height: 36px;
+   margin: 20px 0px 5px 0px;
+   border-radius: 4px;
+   box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+   box-sizing: border-box;
+   color: #fff;
+   cursor: pointer;
+   // font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   outline: none;
+   outline: 0;
+   // padding: 10px 25px;
+   text-align: center;
+   transform: translateY(0);
+   transition: transform 150ms, box-shadow 150ms;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+
+   &:hover{
+      transform: translateY(-3px);
+      transition: transform 350ms;
+   }
+   &:active{
+      transform: translateY(3px);
+      transition: transform 350ms;
+   }
+}
+
+.user_page {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   .page_content {
+      max-width: 1500px;
+      width: 100%;
+      min-height: 600px;
+      display: flex;
+      justify-content: space-between;
+
+      .col1 {
+         margin-right: 24px;
+      }
+
+      .col2 {
+         width: 100%;
+
+         .user_info {
+            .header {
+               .divider {
+                  margin-bottom: 10px;
+               }
+            }
+
+            .user_form {
+               width: 100%;
+               padding-left: 5%;
+               margin-bottom: 24px;
+               .form_item {
+                  display: flex;
+                  margin: 12px 0px 12px 0px;
+
+                  span:first-child {
+                     margin-right: 12px;
+                     width: 150px;
+                  }
+               }
+
+            }
+
+            .group_button {
+               display: flex;
+               align-items: left;
+
+               button:first-child {
+                  margin-right: 20px;
+               }
+
+               .update_button {
+                  @include button;
+                  background-color: #1889f3;
+               }
+
+               .back_button {
+                  @include button;
+                  background-color: #1889f3;
+               }
+               .confirm_button {
+                  @include button;
+                  background-color: #08f700;
+               }
+
+               .confirm_button:disabled {
+                  @include button;
+                  background-color: #08f70098;
+                  cursor: auto
+               }
+               .modal_group_button{
+                  .cancel{
+                     @include button;
+                     background-color: #f83030ea;
+                  }
+
+                  .ok{
+                     @include button;
+                     background-color: #1889f3;
+                  }
+               }
+            }
+
+         }
+      }
+   }
+}
